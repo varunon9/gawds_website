@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4
+/strict.dtd">
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>GAWDS|GAWDS NIT KKR|GAWDS NIT Kurukshetra</title>
+        <link rel="stylesheet" href="css/stylesheet.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<style type="text/css">
+		  #slide1{
+		    background:url('img/slide1.jpg') 50% 0 no-repeat fixed;
+		  }
+		  #slide3{
+		    background: url('img/slide3.jpg') 50% 0 no-repeat fixed;
+		  }
+		  #slide5{
+		    background: url('img/slide5.jpg') 50% 0 no-repeat fixed;
+		  }
+		</style>
+	    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	    <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+		
+		<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav ul li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1500);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+
+
+		</script>
+
+	</head> 
+	
+	<body>
+
+<!----- HEADER START--->   
+		<header id="header">
+			<div class="content">
+				<div id="logo"><a href=""> GAWDS </a>
+				</div>
+
+				<div id="nav">
+					<ul>
+						<li><a href="#slide1" class="active" >Home</a></li>
+						<li><a href="#slide2" title="Who we are">About Us</a></li>
+						<li><a href="#slide3" title="We're being boastful here">What we did</a></li>
+						<li><a  href="#slide4" title="Meet the GAWDS and bless your skills">Our Team</a></li>
+						<li><a href="#slide5" title="Join the Brigade and be one of a kind">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>	
+<!----- HEADER END--->   
+
+<!----- SLIDES START --->   	
+		<div id="slide1">
+			<center>
+				<div id="welcome_screen">
+					<img src="img/welcome.png" alt=""/>
+				</div> 
+			    </br>
+				<div class="container-fluid topCover">
+					<h1 style="letter-spacing:.4em; font-size: 3em;"><span style="opacity: 1;" id="g">G</span><span style="opacity: 0;" id="a">A</span><span style="opacity: 1;" id="w">W</span><span style="opacity: 1;" id="d">D</span><span style="opacity: 1;" id="s">S</span></h1>
+			
+					<script>
+				var letter_num = 1;
+				setInterval(function(){
+					if(letter_num == 1)
+					$(".topCover h1 span:nth-child(5)").css('opacity','1');
+					else
+					$(".topCover h1 span:nth-child("+(letter_num-1)+")").css('opacity','1');
+					$(".topCover h1 span:nth-child("+letter_num+")").css('opacity','0');
+					if(letter_num == 5)
+					letter_num = 1;
+					else ++letter_num;
+				},900);
+				$(document).ready(function(){
+					$('.topCover h1').hover(function(){
+						$(this).css('letter-spacing','0');
+						$(this).css('font-size','3em');
+						$('#g').html('Graphics');
+						$('#a').html(' And');
+						$('#w').html(' Web');
+						$('#d').html(' Development');
+						$('#s').html(' Squad');
+					},function(){
+						$(this).css('letter-spacing','.4em');
+						$('#g').html('G');
+						$('#a').html('A');
+						$('#w').html('W');
+						$('#d').html('D');
+						$('#s').html('S');
+					});
+					$('a[href^="#"]').on('click',function (e) {
+					e.preventDefault();
+                
+					var target = this.hash,
+					$target = $(target);
+	
+					$('html, body').stop().animate({
+					'scrollTop': $target.offset().top
+					}, 2000, 'swing', function () {
+					window.location.hash = target;
+					});
+			});
+				});
+				
+
+					</script>
+				</div>
+			</center>
+			
+		</div> 
+
+	<div id="slide2">
+		<div id="about_us">
+			<h1>Who we are<small> About us</small></h1>
+			<p class="about_us">
+			We are group of Developers and Designers of NIT Kurukshetra, enthusiastic for innovating and improving our and others skills.
+			</p>
+			<p class="about_us">
+				Our work revolves around designing great graphics to great web 
+                applications. We meet, we share our knowledge and we grow the other day.
+			</p>
+		</div>
+		
+    </div> 
+	
+	
+   <div id="slide3">
+			   <h1>What we did<small> Featured Work</small></h1> 
+			 
+					
+					<!---works--->
+					<!---images-hover-effects--->
+					<script src="js/jquery_002.js"></script>
+					<link rel="stylesheet" type="text/css" href="css/jquery.css">
+					<script type="text/javascript">
+					    $(document).ready(function() {
+					      $('#whatever').hoverGrid();
+					    });
+					</script>
+					<!---images-hover-effects--->
+					
+							<div class="hover-grid" id="whatever">
+								<div class="col-md-4 work-grid">
+								    <div class="item hover-grid-item">
+								        <img src="img/ts.jpg">
+								        <div class="caption" style="display: none;">
+								            <h2>Web Development</h2>
+								            <p>Altius, Techspardha, Confluence, Obscura, Emarket - and we did end to end.</p>
+								        </div>
+								    </div>  
+							    </div>  
+							    <div class="col-md-4 work-grid">
+								    <div class="item hover-grid-item">
+								        <img src="img/Altius13amttextBG.gif">
+								        <div class="caption" style="display: none;">
+								            <h2>Animations</h2>
+								            <p>We build 'em on Corel or HTML5, we build frames, you see the movie.</p>
+								        </div>
+								    </div>  
+							    </div>    
+							    <div class="col-md-4 work-grid">
+								    <div class="item hover-grid-item">
+								        <img src="img/graphics2.jpg">
+								        <div class="caption" style="display: none;">
+								            <h2> Graphics Designing</h2>
+								            <p>We understand colors and eyes.</p>
+								        </div>
+								    </div>  
+							    </div>    
+							    <div class="col-md-4 work-grid">
+								    <div class="item hover-grid-item">
+								        <img src="img/video.jpg" onclick="window.open('http://www.youtube.com/watch?v=0v6OFi05BY8','_blank')">
+								        <div class="caption" style="display: none;">
+								            <h2>Movie Making</h2>
+								            <p>Just the flick.</p>
+								        </div>
+								    </div>  
+							    </div>    
+							    <div class="col-md-4 work-grid">
+								    <div class="item hover-grid-item">
+								        <img src="img/IMG_5515.JPG">
+								        <div class="caption" style="display: none;">
+								            <h2>Workshops</h2>
+								            <p>We organised Web Development, Graphics and Photoshop, and Open Source workshops.</p>
+								        </div>
+								    </div>  
+							    </div>    
+							    <div class="col-md-4 work-grid">
+								    <div class="item hover-grid-item">
+								        <img src="img/brainstorm.jpg">
+								        <div class="caption" style="display: none;">
+								            <h2>Brainstorm</h2>
+								            <p>We teach each other what we expertise in.</p>
+								        </div>
+								    </div>  
+							    </div>    
+							     
+							                  
+							</div>
+			
+					   
+					
+				
+		
+    </div> 
+	
+	
+	<div id="slide4">
+		<h1>Our Team<small>  Oh My GAWDS!</small></h1> 
+		<div id="our_team">
+              <h2>Web Developers:</h2>
+			  <p>Siddhant Garg, Tarun Rai Tara, Akash Mehendiratta, Harsh Choudhary, Utkarsh Kumar, Luv Karakoti, Varun Kumar</p>
+				<h2>Graphic Designers:</h2>
+				<p>Neha Mittal, Bhanuj Verma, Kislay Jain, Saurabh Dhillon</p>
+				<h2>Animations and Movies:</h2>
+				<p>Vinay Jonnalgadda, Sumit Kumar, Prudhviraj</p>
+			<p style="color:darkgreen;">
+				PS: We won't hesitate if you meet us for coffee or something. :)
+			</p>
+		</div> 
+    </div> 
+	
+	
+	<div id="slide5">
+		<h1>Want to Join our Brigade?<small> Meet the GAWDS</small></h1>
+		<div id="contact_us">
+			<p>Reach us out on namaste@gawds.in and send us a few lines of why do you want to join us.</p>
+			<p style="color:white;">Or</p>
+			<p>Fill the form below</p>
+			<p><i>Remember, We need passion, not stereotypes.</i></p>
+		</div></br>
+        <div id="form">
+			<form name="myform" id="myform" action="mailto:gawds.nitk@gmail.com" method="post" onsubmit="return validate();">
+				<label>Name: <input type="text" size="30" maxlength="50"  id="name" class="required" title="Enter your full name"/>(*)</label></br>
+				<label>Designation: <input type="text" size="25" maxlength="50" id="designation" class="required" title="Enter your designation"/>(*)</label></br>
+				<label>Mobile: <input type="text"  size="30" maxlength="30" id="mobile" title="Enter your mobile no"/></label></br>
+				<label>Email: <input type="text"  size="31" maxlength="30" id="email" class="required" title="Enter your email id"/>(*)</label></br>
+				<label>Comments(*)</label></br>
+				<textarea rows="6" cols="39" id="comments" class="required" title="Enter your query/suggestion/feedback"></textarea></br>
+				<input type="submit" value="submit"/>
+				<input type="reset" value="reset"/>
+            </form>	
+			<script src="js/validation.js" type="text/javascript">
+			</script>
+        </div>		
+	</div> 
+	
+	<!----- SLIDES END --->
+	
+	<!----- FOOTER STARTS --->
+	<div id="footer">
+	  <h3>Graphics And Web Development Squad</h3>
+	  <h4>NIT KURUKSHETRA</h4>
+	  <div id="nav_footer">
+					<ul>
+						<li><a href="#slide1">Home</a></li>
+						<li><a href="#slide2">About Us</a></li>
+						<li><a href="#slide3">What we did</a></li>
+						<li><a  href="#slide4">Our Team</a></li>
+						<li><a href="#slide5">Contact Us</a></li>
+					</ul>
+				</div>
+	</div>
+	
+	<!----- FOOTER END --->
+	
+
+
+</body>
+</html>

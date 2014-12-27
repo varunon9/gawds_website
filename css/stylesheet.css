@@ -1,0 +1,412 @@
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+/*= HEADER & NAVIGATION
+--------------------------------------------------------*/
+
+#header { 
+	width: 100%; 
+	background: url('../img/header-bg.png'); 	
+	position: fixed;
+	margin-top:3%;
+	font-size:1em;
+	z-index:2;
+} 
+#logo a {
+ color: #fff; 
+ text-decoration: none; 
+ float: left; 
+ font-size:2em; 
+ color: #fff; 
+ font-family:"Wellfleet"; 
+ font-weight: bold;
+ padding-left:1em; 
+}
+#nav ul{
+  list-style-type: none;
+  float:right;	
+}
+#nav ul li{
+  display:inline-block;
+}
+#nav ul li{	
+	padding-right:.8em;
+}
+#nav ul li a {
+ color: #fff;
+ opacity:0.6; 
+ font-size: 1em;
+ text-decoration: none; 
+ font-family: 'Wellfleet';
+}
+#nav ul li a.active {
+ color: #fff;
+ opacity:1;
+ border-bottom: 2px solid #fff;
+ }
+#nav ul li a:hover {
+ color: #fff;
+ opacity:1;
+ }
+
+
+
+/*= SLIDES STYLING
+--------------------------------------------------------*/
+
+#slide1, #slide2{ width: 100%; }
+#slide1{
+	//background:url('../img/slide1.jpg') 50% 0 no-repeat fixed;
+	color: #fff;
+	height:900px;
+	margin: 0;
+	background-size: cover;
+}
+#slide1 img{
+  width:36%;
+  margin-top:12%;
+  //background-color:yellow;
+}
+#slide2, #slide3, #slide4, #slide5{
+  height:720px;
+}
+/* no work of welcome screen at all*/
+
+#slide2{
+  background-color: white;
+  color: #333333;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align:center;
+}
+#slide2 small{
+  color:silver;
+  //text-decoration:none !important;
+}
+#slide2 h1{
+  text-shadow:.05em .01em  purple;
+}
+.about_us {
+  background-color:brown;
+  padding-top:5%;
+  padding-bottom:5%;
+  width:80%;
+  margin-left:10%;
+  font-size:1.8em;
+  color:white;
+}
+#slide3{
+	//background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
+	color: #fff;
+	text-align:center;
+}
+#slide3 small{
+  color:black;
+}
+#slide4{
+	background-color: #fff;
+	color: #333333;
+	text-align:center;
+}
+#slide4 small{
+  color:silver;
+}
+#our_team h2{
+ text-decoration:underline;
+ color:brown;
+}
+#our_team p{
+ font-weight:bold;
+ font-size:1.1em;
+}
+#slide5{
+	//background: url(../img/slide5.jpg) 50% 0 no-repeat fixed;
+	color: brown;
+	text-align:center;
+}
+#slide5 small{
+  color:silver;
+}
+#contact_us p{
+  font-size:1.2em;
+  font-weight:bold;
+  color:black;
+}
+#form{
+  text-align:left;
+  margin-left:30%;
+  border-style:double;
+  padding:1em;
+  margin-right:30%;
+  //overflow-x:scroll;
+  font-size:1em;
+}
+#form form input{
+  margin-top:.3em;
+}
+input.required,textarea.required{
+  background-color:silver;
+}
+input:focus{
+  color:darkgreen;
+  font-weight:bold;
+}
+
+/*= FOOTER 
+--------------------------------------------------------*/
+#footer{
+  //background-color:black;
+  text-align:center;
+  font-size:1em;
+}
+#nav_footer ul{
+  list-style-type:none;
+  //display:none;
+  //visibility:hide;
+}
+#nav_footer ul li{
+  display:inline-block;
+  padding-right:.8em;
+  font-weight:bold;
+}
+#nav_footer ul li a{
+  color:brown;
+}
+#nav_footer ul li a:hover{
+  color:black;
+}
+/*= MEDIA 
+--------------------------------------------------------*/
+
+
+@media only screen and (max-width:900px){
+  #slide2, #slide4, #slide5{
+    height:850px;
+	font-size:.9em;
+  }
+  #slide1{
+    font-size:.8em;
+	height:650px;
+  }
+  #slide1 img{
+	margin-top:15%;
+	width:40%;
+  }
+  #slide2,#slide4{
+    height:475px;
+  }
+  #slide3{
+    height:690px;
+  }
+  #logo{
+    font-size:.85em;
+  }
+  #nav{
+    font-size:0.9em;
+  }
+  #form{
+  text-align:left;
+  margin-left:25%;
+  border-style:double;
+  padding:1em;
+  margin-right:28%;
+  //overflow-x:scroll;
+ }
+ #slide5{
+   height:600px;
+ }
+ #footer{
+   font-size:.9em;
+ }
+}
+@media only screen and (max-width:768px){
+  #slide2, #slide4, #slide5{
+    height:850px;
+	font-size:.85em;
+  }
+  #slide1{
+    font-size:.76em;
+	height:600px;
+  }
+  #slide1 img{
+	margin-top:18%;
+	width:45%;
+  }
+  #slide2,#slide4{
+    height:450px;
+  }
+  #slide3{
+    height:680px;
+  }
+  #logo{
+    font-size:.83em;
+  }
+  #nav{
+    font-size:0.88em;
+  }
+  #form{
+  text-align:left;
+  margin-left:12%;
+  border-style:double;
+  padding:1em;
+  margin-right:12%;
+  //overflow-x:scroll;
+  }
+  #slide5{
+    height:600px;
+  }
+  #footer{
+    font-size:.85em;
+  }
+}
+@media only screen and (max-width:640px){
+  #slide2, #slide4, #slide5{
+    height:800px;
+	font-size:.8em;
+  }
+  #slide2,#slide4{
+    height:450px;
+  }
+  #slide1{
+    font-size:.7em;
+	height:600px;
+  }
+  #slide1 img{
+	margin-top:25%;
+	width:55%;
+  }
+  #slide3{
+    height:1110px;
+  }
+  #logo{
+    font-size:.8em;
+  }
+  #nav{
+    font-size:0.85em;
+  }
+  #form{
+  text-align:left;
+  margin-left:8%;
+  border-style:double;
+  padding:1em;
+  margin-right:8%;
+  //overflow-x:scroll;
+  }
+  #slide5{
+    height:575px;
+  }
+  #footer{
+    font-size:.85em;
+  }
+}
+@media only screen and (max-width:500px){
+  #header{
+    position:absolute;
+  }
+  #slide1 img{
+	margin-top:33%;
+	width:55%;
+  }
+}
+@media only screen and (max-width:480px){
+  #slide2, #slide4, #slide5{
+    height:700px;
+	font-size:.75em;
+  }
+  #slide2,#slide4{
+    height:425px;
+  }
+  #slide3{
+    height:1060px;
+  }
+  #slide1{
+    font-size:.6em;
+	height:475px;
+  }
+  #logo{
+    font-size:.7em;
+  }
+  #nav{
+    font-size:0.75em;
+  }
+  #form{
+  text-align:left;
+  margin-left:4%;
+  border-style:double;
+  padding:1em;
+  margin-right:4%;
+  overflow-x:scroll;
+  }
+  #footer{
+    font-size:.8em;
+  }
+}
+@media only screen and (max-width:320px){
+  #slide1{
+    font-size:.35em;
+	height:425px;
+  }
+  #slide1 img{
+	margin-top:40%;
+	width:55%;
+  }
+  #slide2,#slide4{
+   height:375px;
+  }
+  #slide2,#slide3,#slide4,#slide5{
+    font-size:.6em;
+  }
+  #slide3{
+    height:980px;
+  }
+  #logo{
+    font-size:.6em;
+	//float:right;
+	//text-align:center;
+	display:none;
+  }
+  #nav ul li{
+    font-size:.8em;
+  }
+  #nav ul{
+   //font-size:.7em;
+   float:left;
+  }
+  #slide5{
+    //height:560px;
+  }
+  #footer{
+    font-size:.7em;
+  }
+}
+@media only screen and (max-width:250px){
+  #slide1{
+    font-size:.3em;
+	height:400px;
+  }
+  #slide1 img{
+	margin-top:50%;
+	width:75%;
+  }
+  #slide2,#slide4{
+    height:380px;
+  }
+  #slide2,#slide4,#slide5{
+    font-size:.5em;
+  }
+  #slide3{
+    height:900px;
+  }
+  #logo{
+    font-size:.4em;
+  }
+  #nav{
+   font-size:.65em;
+  }
+  #footer{
+    font-size:.6em;
+  }
+}
